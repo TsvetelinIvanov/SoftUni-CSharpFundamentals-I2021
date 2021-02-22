@@ -9,6 +9,7 @@ namespace _01BonusScoringSystem
             int studentsCount = int.Parse(Console.ReadLine());
             int lecturesCount = int.Parse(Console.ReadLine());
             int additionalBonus = int.Parse(Console.ReadLine());
+            
             double maxBonus = 0;
             int maxAttendancesCount = 0;
             for (int i = 0; i < studentsCount; i++)
