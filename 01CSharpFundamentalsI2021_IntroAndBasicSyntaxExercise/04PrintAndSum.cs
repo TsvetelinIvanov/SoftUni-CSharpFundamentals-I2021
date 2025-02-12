@@ -14,6 +14,7 @@ namespace _04PrintAndSum
                 Console.Write(i + " ");
                 sum += i;
             }
+            
             Console.WriteLine();
             Console.WriteLine("Sum: " + sum);
         }
