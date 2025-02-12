@@ -11,8 +11,8 @@ namespace _10RageExpenses
             decimal mousePrice = decimal.Parse(Console.ReadLine());
             decimal keyboardPrice = decimal.Parse(Console.ReadLine());
             decimal displayPrice = decimal.Parse(Console.ReadLine());
+            
             decimal rageExpensesAmount = 0;
-
             for (int i = 1; i <= lostGamesCount; i++)
             {
                 if (i % 2 == 0)
