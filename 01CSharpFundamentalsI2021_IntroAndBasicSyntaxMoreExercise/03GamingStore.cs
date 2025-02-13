@@ -93,6 +93,7 @@ namespace _03GamingStore
                 if (balance == 0)
                 {
                     Console.WriteLine("Out of money!");
+                    
                     return;
                 }
             }
