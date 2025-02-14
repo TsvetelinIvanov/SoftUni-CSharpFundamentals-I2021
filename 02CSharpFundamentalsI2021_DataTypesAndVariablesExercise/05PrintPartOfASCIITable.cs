@@ -7,9 +7,9 @@ namespace _05PrintPartOfASCIITable
         static void Main(string[] args)
         {
 
-            char startChar = (char)int.Parse(Console.ReadLine());
-            char endChar = (char)int.Parse(Console.ReadLine());
-            for (char ch = startChar; ch <= endChar; ch++)
+            char startCharacter = (char)int.Parse(Console.ReadLine());
+            char endCharacter = (char)int.Parse(Console.ReadLine());
+            for (char ch = startCharacter; ch <= endCharacter; ch++)
             {
                 Console.Write(ch + " ");
             }
