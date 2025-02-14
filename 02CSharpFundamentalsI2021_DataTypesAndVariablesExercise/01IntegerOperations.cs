@@ -10,6 +10,7 @@ namespace _01IntegerOperations
             int secondNumber = int.Parse(Console.ReadLine());
             int thirdNumber = int.Parse(Console.ReadLine());
             int fourthNumber = int.Parse(Console.ReadLine());
+            
             long result = (long)((firstNumber + secondNumber) / thirdNumber) * fourthNumber;           
             Console.WriteLine(result);
         }
