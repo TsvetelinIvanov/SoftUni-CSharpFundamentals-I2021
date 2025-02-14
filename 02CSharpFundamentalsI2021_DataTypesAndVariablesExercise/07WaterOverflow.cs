@@ -6,9 +6,9 @@ namespace _07WaterOverflow
     {
         static void Main(string[] args)
         {
-            int tankCapacity = 255;
-            int waterInTank = 0;
             int pouringsCount = int.Parse(Console.ReadLine());
+            int tankCapacity = 255;
+            int waterInTank = 0;            
             for (int i = 0; i < pouringsCount; i++)
             {
                 int waterQuantity = int.Parse(Console.ReadLine());
