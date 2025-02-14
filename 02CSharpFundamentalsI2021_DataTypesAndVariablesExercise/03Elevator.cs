@@ -8,6 +8,7 @@ namespace _03Elevator
         {
             int peopleCount = int.Parse(Console.ReadLine());
             int elevatorCapacity = int.Parse(Console.ReadLine());
+            
             int coursesCount = (int)Math.Ceiling((double)peopleCount / elevatorCapacity);
             Console.WriteLine(coursesCount);
         }
