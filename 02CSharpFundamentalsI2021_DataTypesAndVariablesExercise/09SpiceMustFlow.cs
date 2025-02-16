@@ -8,23 +8,23 @@ namespace _09SpiceMustFlow
         {
             int yield = int.Parse(Console.ReadLine());
             int daysCount = 0;
-            int spaiceQuantity = 0;
+            int spiceQuantity = 0;
             while (yield >= 100)
             {
-                spaiceQuantity += yield;
+                spiceQuantity += yield;
                 yield -= 10;
                 daysCount++;
-                spaiceQuantity -= 26;
+                spiceQuantity -= 26;
             }
 
-            spaiceQuantity -= 26;
-            if (spaiceQuantity < 0)
+            spiceQuantity -= 26;
+            if (spiceQuantity < 0)
             {
-                spaiceQuantity = 0;
+                spiceQuantity = 0;
             }
 
             Console.WriteLine(daysCount);
-            Console.WriteLine(spaiceQuantity);
+            Console.WriteLine(spiceQuantity);
         }
     }
 }
