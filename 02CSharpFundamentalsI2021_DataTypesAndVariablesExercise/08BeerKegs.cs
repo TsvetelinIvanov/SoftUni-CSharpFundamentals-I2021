@@ -14,6 +14,7 @@ namespace _08BeerKegs
                 string kegModel = Console.ReadLine();
                 double kegRadius = double.Parse(Console.ReadLine());
                 int kegHeight = int.Parse(Console.ReadLine());
+                
                 double kegVolume = Math.PI * Math.Pow(kegRadius, 2) * kegHeight;
                 if (kegVolume > biggestKegVolume)
                 {
