@@ -8,6 +8,7 @@ namespace _11Snowballs
         static void Main(string[] args)
         {
             int snowballsCountN = int.Parse(Console.ReadLine());
+            
             int bestSnowballSnow = 0;
             int bestSnowballTime = 0;
             int bestSnowballQuality = 0;
@@ -17,6 +18,7 @@ namespace _11Snowballs
                 int snowballSnow = int.Parse(Console.ReadLine());
                 int snowballTime = int.Parse(Console.ReadLine());
                 int snowballQuality = int.Parse(Console.ReadLine());
+                
                 BigInteger snowballValue = BigInteger.Pow((snowballSnow / snowballTime), snowballQuality);
                 if (snowballValue > bestSnowballValue)
                 {
