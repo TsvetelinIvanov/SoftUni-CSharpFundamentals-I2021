@@ -9,13 +9,13 @@ namespace _10PokeMon
             int powerN = int.Parse(Console.ReadLine());
             int distanceM = int.Parse(Console.ReadLine());
             int exhaustionFactorY = int.Parse(Console.ReadLine());
+            
             int pokedTargetsCount = 0;
             int currentPowerN = powerN;
             while (currentPowerN >= distanceM)
             {
                 currentPowerN -= distanceM;
-                pokedTargetsCount++;                
-
+                pokedTargetsCount++;
                 if (currentPowerN == powerN * 0.5 && exhaustionFactorY != 0 /* && currentPowerN / exhaustionFactorY != 0 */)
                 {
                     currentPowerN /= exhaustionFactorY;
