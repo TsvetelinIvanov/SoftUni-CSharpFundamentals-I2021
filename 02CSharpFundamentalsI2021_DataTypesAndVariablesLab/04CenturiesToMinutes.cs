@@ -7,6 +7,7 @@ namespace _04CenturiesToMinutes
         static void Main(string[] args)
         {
             int centuriesCount = int.Parse(Console.ReadLine());
+            
             int yearsCount = centuriesCount * 100;
             int daysCount = (int)(yearsCount * 365.2422);
             int hoursCount = daysCount * 24;
