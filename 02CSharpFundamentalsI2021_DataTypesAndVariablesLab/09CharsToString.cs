@@ -6,11 +6,12 @@ namespace _09CharsToString
     {
         static void Main(string[] args)
         {
-            char char1 = char.Parse(Console.ReadLine());
-            char char2 = char.Parse(Console.ReadLine());
-            char char3 = char.Parse(Console.ReadLine());
-            string str = string.Empty + char1 + char2 + char3;
-            Console.WriteLine(str);
+            char firstCharacter = char.Parse(Console.ReadLine());
+            char secondCharacter = char.Parse(Console.ReadLine());
+            char thirdCharacter = char.Parse(Console.ReadLine());
+            
+            string concatenatedString = string.Empty + firstCharacter + secondCharacter + thirdCharacter;
+            Console.WriteLine(concatenatedString);
         }
     }
 }
