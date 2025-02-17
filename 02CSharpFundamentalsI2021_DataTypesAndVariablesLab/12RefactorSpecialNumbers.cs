@@ -18,6 +18,7 @@ namespace _12RefactorSpecialNumbers
                 }
 
                 i = currentNumber;
+                
                 bool isSpecialNumber = (digitsSum == 5) || (digitsSum == 7) || (digitsSum == 11);
                 Console.WriteLine("{0} -> {1}", currentNumber, isSpecialNumber);               
             }
