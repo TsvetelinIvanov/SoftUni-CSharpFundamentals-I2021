@@ -8,9 +8,9 @@ namespace _10LadyBugs
         static void Main(string[] args)
         {
             int fieldSize = int.Parse(Console.ReadLine());
-            int[] ladybugIndexes = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] ladybugIndices = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] field = new int[fieldSize];
-            foreach (int ladybugIndex in ladybugIndexes)
+            foreach (int ladybugIndex in ladybugIndices)
             {
                 if (ladybugIndex >= 0 && ladybugIndex < fieldSize)
                 {
@@ -25,7 +25,6 @@ namespace _10LadyBugs
                 int index = int.Parse(commandArray[0]);
                 string direction = commandArray[1];
                 int distance = int.Parse(commandArray[2]);
-
                 if (index >= 0 && index < fieldSize && field[index] == 1)
                 {
                     field[index] = 0;
