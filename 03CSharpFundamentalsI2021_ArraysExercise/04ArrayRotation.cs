@@ -6,21 +6,21 @@ namespace _04ArrayRotation
     {
         static void Main(string[] args)
         {
-            string[] arr = Console.ReadLine().Split();
-            int rotationsCount = int.Parse(Console.ReadLine()) % arr.Length;
+            string[] stringArray = Console.ReadLine().Split();
+            int rotationsCount = int.Parse(Console.ReadLine()) % stringArray.Length;
             for (int i = 0; i < rotationsCount; i++)
             {
-                string[] rotated = new string[arr.Length];
-                rotated[arr.Length - 1] = arr[0];
-                for (int j = 1; j <= arr.Length - 1; j++)
+                string[] rotated = new string[stringArray.Length];
+                rotated[stringArray.Length - 1] = stringArray[0];
+                for (int j = 1; j <= stringArray.Length - 1; j++)
                 {
-                    rotated[j - 1] = arr[j];
+                    rotated[j - 1] = stringArray[j];
                 }
 
-                arr = rotated;
+                stringArray = rotated;
             }
 
-            Console.WriteLine(string.Join(" ", arr));
+            Console.WriteLine(string.Join(" ", stringArray));
         }
     }
 }
