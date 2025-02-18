@@ -7,7 +7,8 @@ namespace _07MaxSequenceOfEqualElements
     {
         static void Main(string[] args)
         {
-            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();            
+            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int maxSequenceLength = 1;
             int maxSequenceNumber = numbers[0];
             int sequenceLength = 1;
