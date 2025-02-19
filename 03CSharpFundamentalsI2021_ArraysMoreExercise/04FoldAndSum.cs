@@ -7,12 +7,14 @@ namespace _04FoldAndSum
     {
         static void Main(string[] args)
         {
-            int[] inputRow = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int k = inputRow.Length / 4;
-            int[] firstRow = inputRow.Take(k).Reverse().Concat(inputRow.Skip(3 * k).Reverse()).ToArray();
-            int[] secondRow = inputRow.Skip(k).Take(2 * k).ToArray();
-            int[] rowsSums = new int[2 * k];
-            for (int i = 0; i < 2 * k; i++)
+            int[] inputArray = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int fourth = inputArray.Length / 4;
+            
+            int[] firstRow = inputArray.Take(fourth).Reverse().Concat(inputArray.Skip(3 * fourth).Reverse()).ToArray();
+            int[] secondRow = inputRow.Skip(fourth).Take(2 * fourth).ToArray();
+            
+            int[] rowsSums = new int[2 * fourth];
+            for (int i = 0; i < 2 * fourth; i++)
             {
                 rowsSums[i] = firstRow[i] + secondRow[i];
             }
