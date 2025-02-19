@@ -8,10 +8,12 @@ namespace _06EvenAndOddSubtraction
         static void Main(string[] args)
         {
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int evenNumbersSum = numbers.Where(n => n % 2 == 0).Sum();
             int oddNumbersSum = numbers.Where(n => n % 2 != 0).Sum();
-            int differenceEvetOdd = evenNumbersSum - oddNumbersSum; 
-            Console.WriteLine(differenceEvetOdd);
+            
+            int difference = evenNumbersSum - oddNumbersSum; 
+            Console.WriteLine(difference);
         }
     }
 }
