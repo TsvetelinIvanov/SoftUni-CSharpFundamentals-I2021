@@ -26,7 +26,6 @@ namespace _02PascalTriangle
                 int[] currentArray = new int[baseArray.Length + 1];
                 currentArray[0] = 1;
                 currentArray[currentArray.Length - 1] = 1;
-
                 for (int j = 1; j < currentArray.Length - 1; j++)
                 {
                     currentArray[j] = baseArray[j - 1] + baseArray[j];
