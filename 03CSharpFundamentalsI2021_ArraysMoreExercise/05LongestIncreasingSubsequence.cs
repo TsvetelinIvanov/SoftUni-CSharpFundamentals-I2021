@@ -10,19 +10,19 @@ namespace _05LongestIncreasingSubsequence
             int[] integers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             
             int[] lengths = new int[integers.Length];
-            int[] previousIndexes = new int[integers.Length];
+            int[] previousIndices = new int[integers.Length];
             int maxLength = 0;
             int previousIndex = -1;
             for (int i = 0; i < integers.Length; i++)
             {
                 lengths[i] = 1;
-                previousIndexes[i] = -1;
+                previousIndices[i] = -1;
                 for (int j = 0; j < i; j++)
                 {
                     if (integers[j] < integers[i] && lengths[j] >= lengths[i])
                     {
                         lengths[i] = 1 + lengths[j];
-                        previousIndexes[i] = j;
+                        previousIndices[i] = j;
                     }
                 }
 
@@ -33,15 +33,15 @@ namespace _05LongestIncreasingSubsequence
                 }
             }
 
-            int[] lis = new int[maxLength];
+            int[] longestIncreasingSubsequence = new int[maxLength];
             for (int i = 0; i < maxLength; i++)
             {
-                lis[i] = integers[previousIndex];
-                previousIndex = previousIndexes[previousIndex];                
+                longestIncreasingSubsequence[i] = integers[previousIndex];
+                previousIndex = previousIndices[previousIndex];                
             }
 
-            Array.Reverse(lis);
-            Console.WriteLine(string.Join(" ", lis));
+            Array.Reverse(longestIncreasingSubsequence);
+            Console.WriteLine(string.Join(" ", longestIncreasingSubsequence));
         }
     }
 }
