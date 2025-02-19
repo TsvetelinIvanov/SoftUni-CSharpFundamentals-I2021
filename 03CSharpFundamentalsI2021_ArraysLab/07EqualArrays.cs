@@ -9,8 +9,8 @@ namespace _07EqualArrays
         {
             int[] firstArray = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] secondArray = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int sum = 0;
-
             for (int i = 0; i < firstArray.Length; i++)
             {
                 if (firstArray[i] != secondArray[i])
