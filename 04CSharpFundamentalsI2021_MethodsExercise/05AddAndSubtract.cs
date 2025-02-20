@@ -9,6 +9,7 @@ namespace _05AddAndSubtract
             int firstNumber = int.Parse(Console.ReadLine());
             int secondNumber = int.Parse(Console.ReadLine());
             int thirdNumber = int.Parse(Console.ReadLine());
+            
             int sum = Sum(firstNumber, secondNumber);
             int result = Subtract(sum, thirdNumber);
             Console.WriteLine(result);
