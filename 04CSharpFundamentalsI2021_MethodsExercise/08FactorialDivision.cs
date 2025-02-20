@@ -8,8 +8,10 @@ namespace _08FactorialDivision
         {
             int firstNumber = int.Parse(Console.ReadLine());
             int secondNumber = int.Parse(Console.ReadLine());
+            
             long firstFactorial = GetFactorial(firstNumber);
             long secondFactorial = GetFactorial(secondNumber);
+            
             decimal result = (decimal)firstFactorial / secondFactorial;
             Console.WriteLine($"{result:f2}");
         }
