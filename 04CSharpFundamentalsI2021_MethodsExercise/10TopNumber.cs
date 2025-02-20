@@ -9,7 +9,7 @@ namespace _10TopNumber
             int endNumber = int.Parse(Console.ReadLine());
             for (int i = 1; i <= endNumber; i++)
             {
-                bool isTopNumber = CheckTopNumber(i);
+                bool isTopNumber = CheckIfIsTopNumber(i);
                 if (isTopNumber)
                 {
                     Console.WriteLine(i);
@@ -17,7 +17,7 @@ namespace _10TopNumber
             }
         }
 
-        private static bool CheckTopNumber(int number)
+        private static bool CheckIfIsTopNumber(int number)
         {
             int digitsSum = 0;
             bool haveOddDigit = false;
