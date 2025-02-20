@@ -117,6 +117,7 @@ namespace _11ArrayManipulator
             if (count > numbers.Length)
             {
                 Console.WriteLine("Invalid count");
+                
                 return;
             }
 
@@ -162,6 +163,7 @@ namespace _11ArrayManipulator
             if (count > numbers.Length)
             {
                 Console.WriteLine("Invalid count");
+                
                 return;
             }
 
