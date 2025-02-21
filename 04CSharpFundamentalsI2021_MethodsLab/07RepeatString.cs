@@ -9,16 +9,17 @@ namespace _07RepeatString
         {
             string inputString = Console.ReadLine();
             int count = int.Parse(Console.ReadLine());
+            
             string outputString = RepeatString(inputString, count);
             Console.WriteLine(outputString);
         }
 
-        private static string RepeatString(string str, int timesOfRepeating)
+        private static string RepeatString(string stringForRepeating, int timesOfRepeating)
         {
             StringBuilder outputBuilder = new StringBuilder();
             for (int i = 0; i < timesOfRepeating; i++)
             {
-                outputBuilder.Append(str);
+                outputBuilder.Append(stringForRepeating);
             }
 
             return outputBuilder.ToString();
