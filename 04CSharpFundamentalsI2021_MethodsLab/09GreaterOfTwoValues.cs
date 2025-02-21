@@ -10,6 +10,7 @@ namespace _09GreaterOfTwoValues
             string type = Console.ReadLine();
             string firstValue = Console.ReadLine();
             string secondValue = Console.ReadLine();
+            
             string maxValue = GetMax(type, firstValue, secondValue);
             Console.WriteLine(maxValue);          
         }
@@ -46,6 +47,7 @@ namespace _09GreaterOfTwoValues
         private static string GetMax(char firstCharacter, char secondCharacter)
         {
             char maxValue = (char)Math.Max(firstCharacter, secondCharacter);
+            
             return maxValue.ToString();
         }
     }
