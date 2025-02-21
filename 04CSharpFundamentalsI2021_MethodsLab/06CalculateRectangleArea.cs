@@ -8,6 +8,7 @@ namespace _06CalculateRectangleArea
         {
             double width = double.Parse(Console.ReadLine());
             double height = double.Parse(Console.ReadLine());
+            
             double area = CalculateRectangleArea(width, height);
             Console.WriteLine(area);
         }
