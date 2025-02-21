@@ -9,6 +9,7 @@ namespace _11MathOperations
             double firstOperand = double.Parse(Console.ReadLine());
             string @operator = Console.ReadLine();
             double secondOperand = double.Parse(Console.ReadLine());
+            
             double result = Calculate(firstOperand, secondOperand, @operator);
             Console.WriteLine(result);
         }
