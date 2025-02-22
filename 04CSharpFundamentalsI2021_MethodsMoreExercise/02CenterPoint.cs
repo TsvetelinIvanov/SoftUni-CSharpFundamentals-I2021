@@ -10,6 +10,7 @@ namespace _02CenterPoint
             double y1 = double.Parse(Console.ReadLine());
             double x2 = double.Parse(Console.ReadLine());
             double y2 = double.Parse(Console.ReadLine());
+            
             PrintClosestToCenterPoint(x1, y1, x2, y2);
         }
 
