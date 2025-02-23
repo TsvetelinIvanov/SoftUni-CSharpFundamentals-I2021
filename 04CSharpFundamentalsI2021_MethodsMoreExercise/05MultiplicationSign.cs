@@ -9,6 +9,7 @@ namespace _05MultiplicationSign
             int firstNumber = int.Parse(Console.ReadLine());
             int secondNumber = int.Parse(Console.ReadLine());
             int thirdNumber = int.Parse(Console.ReadLine());
+            
             string productSign = CheckProductSign(firstNumber, secondNumber, thirdNumber);
             Console.WriteLine(productSign);
         }
