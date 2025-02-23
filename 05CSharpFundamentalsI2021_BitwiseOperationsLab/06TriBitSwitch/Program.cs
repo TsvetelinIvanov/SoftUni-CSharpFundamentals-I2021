@@ -8,6 +8,7 @@ namespace _06TriBitSwitch
         {
             int number = int.Parse(Console.ReadLine());
             int position = int.Parse(Console.ReadLine());
+            
             int mask = 7 << position;
             int shiftedNumber = number ^ mask;
             Console.WriteLine(shiftedNumber);
