@@ -8,7 +8,8 @@ namespace _04BitDestroyerModified
         {
             int number = int.Parse(Console.ReadLine());
             int position = int.Parse(Console.ReadLine());
-            int bit = int.Parse(Console.ReadLine());            
+            int bit = int.Parse(Console.ReadLine());
+            
             int destroyedNumber = number & ~(1 << position) | (bit << position);
             Console.WriteLine(destroyedNumber);
         }
