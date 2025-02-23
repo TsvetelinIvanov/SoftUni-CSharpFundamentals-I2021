@@ -10,10 +10,12 @@ namespace _03LongerLine
             double firstLineY1 = double.Parse(Console.ReadLine());
             double firstLineX2 = double.Parse(Console.ReadLine());
             double firstLineY2 = double.Parse(Console.ReadLine());
+            
             double secondLineX1 = double.Parse(Console.ReadLine());
             double secondLineY1 = double.Parse(Console.ReadLine());
             double secondLineX2 = double.Parse(Console.ReadLine());
             double secondLineY2 = double.Parse(Console.ReadLine());
+            
             CheckLengthAndPrintCoordinates(firstLineX1, firstLineY1, firstLineX2, firstLineY2, secondLineX1, secondLineY1, secondLineX2, secondLineY2);            
         }
 
