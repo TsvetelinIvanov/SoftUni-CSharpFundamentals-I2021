@@ -8,6 +8,7 @@ namespace _01BinaryDgitsCount_
         {
             int number = int.Parse(Console.ReadLine());
             int bit = int.Parse(Console.ReadLine());
+            
             int bitsCount = ReadBitsCount(number, bit);
             Console.WriteLine(bitsCount);
         }
