@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01BinaryDgitsCount", "01BinaryDgitsCount\01BinaryDgitsCount.csproj", "{38332786-FCB6-4B44-80C1-BE6630F429DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01BinaryDigitsCount", "01BinaryDigitsCount\01BinaryDigitsCount.csproj", "{38332786-FCB6-4B44-80C1-BE6630F429DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01BinaryDgitsCount_", "01BinaryDgitsCount_\01BinaryDgitsCount_.csproj", "{70F5E949-7749-41B0-BC99-A0FF672B92B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01BinaryDigitsCount_", "01BinaryDigitsCount_\01BinaryDigitsCount_.csproj", "{70F5E949-7749-41B0-BC99-A0FF672B92B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02BitAtPosition1", "02BitAtPosition1\02BitAtPosition1.csproj", "{25A58776-ACFF-43EA-9DCD-85D2A5FBE519}"
 EndProject
