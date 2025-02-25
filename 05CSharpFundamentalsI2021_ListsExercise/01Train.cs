@@ -13,15 +13,15 @@ namespace _01Train
             string input;
             while ((input = Console.ReadLine()) != "end")
             {
-                string[] passangersOrWagons = input.Split();
-                if (passangersOrWagons[0] == "Add")
+                string[] passengersOrWagon = input.Split();
+                if (passengersOrWagon[0] == "Add")
                 {
-                    int wagon = int.Parse(passangersOrWagons[1]);
+                    int wagon = int.Parse(passengersOrWagon[1]);
                     wagons.Add(wagon);
                 }
                 else
                 {
-                    int passengersCount = int.Parse(passangersOrWagons[0]);
+                    int passengersCount = int.Parse(passengersOrWagon[0]);
                     FitPassengers(wagons, wagonCapacity, passengersCount);
                 }
             }
