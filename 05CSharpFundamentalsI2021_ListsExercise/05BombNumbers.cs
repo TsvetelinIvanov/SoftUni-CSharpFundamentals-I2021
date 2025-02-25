@@ -27,7 +27,6 @@ namespace _05BombNumbers
 
                         numbers.RemoveAt(i);
                         i--;
-                        
                     }
 
                     for (int j = 0; j < bombPower; j++)
