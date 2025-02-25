@@ -13,14 +13,15 @@ namespace _09PokemonDontGo
             while (pokemons.Count > 0)
             {
                 int pokemonIndex = int.Parse(Console.ReadLine());
-
                 if (pokemonIndex < 0)
                 {
                     int changedPokemonValue = pokemons[0];
                     pokemons.RemoveAt(0);
                     removedPokemonsSum += changedPokemonValue;
+                    
                     int copiedPokemonValue = pokemons.Last();
                     pokemons.Insert(0, copiedPokemonValue);
+                    
                     ProcessPokemons(pokemons, changedPokemonValue);
                     continue;
                 }
@@ -30,8 +31,10 @@ namespace _09PokemonDontGo
                     int changedPokemonValue = pokemons.Last();
                     pokemons.RemoveAt(pokemons.Count - 1);
                     removedPokemonsSum += changedPokemonValue;
+                    
                     int copiedPokemonValue = pokemons[0];
                     pokemons.Add(copiedPokemonValue);
+                    
                     ProcessPokemons(pokemons, changedPokemonValue);
                     continue;
                 }
@@ -39,6 +42,7 @@ namespace _09PokemonDontGo
                 int pokemonValue = pokemons[pokemonIndex];
                 pokemons.RemoveAt(pokemonIndex);
                 removedPokemonsSum += pokemonValue;
+                
                 ProcessPokemons(pokemons, pokemonValue);
             }
 
