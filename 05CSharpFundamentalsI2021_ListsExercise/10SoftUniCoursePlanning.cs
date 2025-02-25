@@ -72,7 +72,6 @@ namespace _10SoftUniCoursePlanning
             int firstExerciseIndex = lesons.IndexOf(firstLeson + "-Exercise");
             int secondLesonIndex = lesons.IndexOf(secondLeson);
             int secondExerciseIndex = lesons.IndexOf(secondLeson + "-Exercise");
-
             //int firstLesonIndex = -1;
             //int firstExerciseIndex = -1;
             //int secondLesonIndex = -1;
