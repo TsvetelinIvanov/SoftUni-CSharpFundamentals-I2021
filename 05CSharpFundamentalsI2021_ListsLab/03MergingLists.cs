@@ -10,6 +10,7 @@ namespace _03MergingLists
         {
             List<string> firstList = Console.ReadLine().Split().ToList();
             List<string> secondList = Console.ReadLine().Split().ToList();
+            
             List<string> mergedList = new List<string>();
             for (int i = 0; i < Math.Min(firstList.Count, secondList.Count); i++)
             {
