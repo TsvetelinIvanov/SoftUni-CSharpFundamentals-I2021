@@ -11,6 +11,7 @@ namespace _05DrumSet
             decimal money = decimal.Parse(Console.ReadLine());
             List<int> drums = Console.ReadLine().Split().Select(int.Parse).ToList();
             List<int> originalDrums = new List<int>(drums);
+            
             string hitPowerString;
             while ((hitPowerString = Console.ReadLine()) != "Hit it again, Gabsy!")
             {
