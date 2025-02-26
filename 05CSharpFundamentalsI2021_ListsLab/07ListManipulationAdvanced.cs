@@ -35,8 +35,8 @@ namespace _07ListManipulationAdvanced
                         numbers.Insert(indexToInserting, numberToInserting);
                         break;
                     case "Contains":
-                        int numberToSearch = int.Parse(commandLine[1]);
-                        bool contains = numbers.Contains(numberToSearch);
+                        int numberToSearching = int.Parse(commandLine[1]);
+                        bool contains = numbers.Contains(numberToSearching);
                         if (contains)
                         {
                             Console.WriteLine("Yes");
