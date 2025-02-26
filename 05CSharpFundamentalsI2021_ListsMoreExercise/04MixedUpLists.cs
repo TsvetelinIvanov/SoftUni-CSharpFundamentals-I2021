@@ -11,6 +11,7 @@ namespace _04MixedUpLists
             int[] firstNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] secondNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             Array.Reverse(secondNumbers);
+            
             int numbersLength = Math.Min(firstNumbers.Length, secondNumbers.Length);
             List<int> mixedNumbers = new List<int>(numbersLength);
             for (int i = 0; i < numbersLength; i++)
