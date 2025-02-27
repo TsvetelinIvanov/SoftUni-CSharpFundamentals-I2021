@@ -4,6 +4,27 @@ using System.Collections.Generic;
 
 namespace _04Students
 {
+    class Student
+    {
+        public Student(string firstName, string lastName, double grade)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Grade = grade;
+        }
+
+        public string FirstName { get; }
+
+        public string LastName { get; }
+
+        public double Grade { get; }
+
+        public override string ToString()
+        {
+            return $"{this.FirstName} {this.LastName}: {this.Grade:f2}";
+        }
+    }
+    
     class Program
     {
         static void Main(string[] args)
@@ -21,27 +42,6 @@ namespace _04Students
             }
 
             students.OrderByDescending(s => s.Grade).ToList().ForEach(s => Console.WriteLine(s));
-        }
-
-        class Student
-        {
-            public Student(string firstName, string lastName, double grade)
-            {
-                this.FirstName = firstName;
-                this.LastName = lastName;
-                this.Grade = grade;
-            }
-
-            public string FirstName { get; }
-
-            public string LastName { get; }
-
-            public double Grade { get; }
-
-            public override string ToString()
-            {
-                return $"{this.FirstName} {this.LastName}: {this.Grade:f2}";
-            }
         }
     }
 }
