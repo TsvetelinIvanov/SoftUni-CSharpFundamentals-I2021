@@ -4,13 +4,29 @@ using System.Collections.Generic;
 
 namespace _05TeamworkProjects
 {
+    class Team
+    {
+        public Team(string teamName, string creator)
+        {
+            this.TeamName = teamName;
+            this.Creator = creator;
+            this.Members = new List<string>();
+        }
+
+        public string TeamName { get; }
+
+        public string Creator { get; }
+
+        public List<string> Members { get; }
+    }
+    
     class Program
     {
         static void Main(string[] args)
         {
             List<Team> teams = new List<Team>();
-            int teamNumber = int.Parse(Console.ReadLine());
-            for (int i = 0; i < teamNumber; i++)
+            int teamsCount = int.Parse(Console.ReadLine());
+            for (int i = 0; i < teamsCount; i++)
             {
                 string[] teamCreation = Console.ReadLine().Split('-');
                 string creator = teamCreation[0];
@@ -77,21 +93,5 @@ namespace _05TeamworkProjects
                 Console.WriteLine(disbandedTeam.TeamName);
             }
         }
-    }
-
-    class Team
-    {
-        public Team(string teamName, string creator)
-        {
-            this.TeamName = teamName;
-            this.Creator = creator;
-            this.Members = new List<string>();
-        }
-
-        public string TeamName { get; }
-
-        public string Creator { get; }
-
-        public List<string> Members { get; }
     }
 }
