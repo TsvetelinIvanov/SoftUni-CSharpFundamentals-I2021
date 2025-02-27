@@ -4,6 +4,25 @@ using System.Collections.Generic;
 
 namespace _06VehicleCatalogue
 {
+    class Vehicle
+    {
+        public Vehicle(string type, string model, string color, int horsepower)
+        {
+            this.Type = type[0].ToString().ToUpper() + type.Substring(1);
+            this.Model = model;
+            this.Color = color;
+            this.Horsepower = horsepower;
+        }
+
+        public string Type { get; }
+
+        public string Model { get; }
+
+        public string Color { get; }
+
+        public int Horsepower { get; }
+    }
+    
     class Program
     {
         static void Main(string[] args)
@@ -25,6 +44,7 @@ namespace _06VehicleCatalogue
             {
                 string model = input;
                 Vehicle vehicle = vehicles.FirstOrDefault(v => v.Model == model);
+                
                 Console.WriteLine("Type: " + vehicle.Type);
                 Console.WriteLine("Model: " + vehicle.Model);
                 Console.WriteLine("Color: " + vehicle.Color);
@@ -33,27 +53,9 @@ namespace _06VehicleCatalogue
 
             double carsHorsepower = vehicles.Count(v => v.Type == "Car") > 0 ? vehicles.Where(v => v.Type == "Car").Average(v => v.Horsepower) : 0;
             double trucksHorsepower = vehicles.Count(v => v.Type == "Truck") > 0 ? vehicles.Where(v => v.Type == "Truck").Average(v => v.Horsepower) : 0;
+            
             Console.WriteLine($"Cars have average horsepower of: {carsHorsepower:f2}.");
             Console.WriteLine($"Trucks have average horsepower of: {trucksHorsepower:f2}.");
         }
-    }
-
-    class Vehicle
-    {
-        public Vehicle(string type, string model, string color, int horsepower)
-        {
-            this.Type = type[0].ToString().ToUpper() + type.Substring(1);
-            this.Model = model;
-            this.Color = color;
-            this.Horsepower = horsepower;
-        }
-
-        public string Type { get; }
-
-        public string Model { get; }
-
-        public string Color { get; }
-
-        public int Horsepower { get; }
     }
 }
