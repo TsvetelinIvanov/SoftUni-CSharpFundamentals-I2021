@@ -4,38 +4,6 @@ using System.Collections.Generic;
 
 namespace _03ArticlesII
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            List<Article> articles = new List<Article>();
-            int articlesCount = int.Parse(Console.ReadLine());
-            for (int i = 0; i < articlesCount; i++)
-            {
-                string[] articleData = Console.ReadLine().Split(", ");
-                string title = articleData[0];
-                string content = articleData[1];
-                string author = articleData[2];
-                Article article = new Article(title, content, author);
-                articles.Add(article);
-            }
-
-            string criteria = Console.ReadLine();
-            switch (criteria)
-            {
-                case "title":
-                    articles.OrderBy(a => a.Title).ToList().ForEach(a => Console.WriteLine(a));
-                    break;
-                case "content":
-                    articles.OrderBy(a => a.Content).ToList().ForEach(a => Console.WriteLine(a));
-                    break;
-                case "author":
-                    articles.OrderBy(a => a.Author).ToList().ForEach(a => Console.WriteLine(a));
-                    break;
-            }            
-        }
-    }
-
     class Article
     {
         public Article(string title, string content, string author)
@@ -69,6 +37,38 @@ namespace _03ArticlesII
         public override string ToString()
         {
             return this.Title + " - " + this.Content + ": " + this.Author;
+        }
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Article> articles = new List<Article>();
+            int articlesCount = int.Parse(Console.ReadLine());
+            for (int i = 0; i < articlesCount; i++)
+            {
+                string[] articleData = Console.ReadLine().Split(", ");
+                string title = articleData[0];
+                string content = articleData[1];
+                string author = articleData[2];
+                Article article = new Article(title, content, author);
+                articles.Add(article);
+            }
+
+            string criteria = Console.ReadLine();
+            switch (criteria)
+            {
+                case "title":
+                    articles.OrderBy(a => a.Title).ToList().ForEach(a => Console.WriteLine(a));
+                    break;
+                case "content":
+                    articles.OrderBy(a => a.Content).ToList().ForEach(a => Console.WriteLine(a));
+                    break;
+                case "author":
+                    articles.OrderBy(a => a.Author).ToList().ForEach(a => Console.WriteLine(a));
+                    break;
+            }            
         }
     }
 }
