@@ -4,6 +4,17 @@ using System.Collections.Generic;
 
 namespace _05StudentsII
 {
+    class Student
+    {
+        public string FirtName { get; set; }
+        
+        public string LastName { get; set; }
+        
+        public int Age { get; set; }
+        
+        public string HomeTown { get; set; }
+    }
+    
     class Program
     {
         static void Main(string[] args)
@@ -25,27 +36,18 @@ namespace _05StudentsII
                 }
                 else
                 {
-                    Student student = new Student()
-                    {
-                        FirtName = firstName,
-                        LastName = lastName,
-                        Age = age,
-                        HomeTown = homeTown
-                    };
+                    Student student = new Student();
+                    sudent.FirtName = firstName;
+                    sudent.LastName = lastName;
+                    sudent.Age = age;
+                    sudent.HomeTown = homeTown;
+                    
                     students.Add(student);
                 }                
             }
 
             string town = Console.ReadLine();
             students.Where(s => s.HomeTown == town).ToList().ForEach(s => Console.WriteLine($"{s.FirtName} {s.LastName} is {s.Age} years old."));
-        }
-
-        class Student
-        {
-            public string FirtName { get; set; }
-            public string LastName { get; set; }
-            public int Age { get; set; }
-            public string HomeTown { get; set; }
         }
     }
 }
