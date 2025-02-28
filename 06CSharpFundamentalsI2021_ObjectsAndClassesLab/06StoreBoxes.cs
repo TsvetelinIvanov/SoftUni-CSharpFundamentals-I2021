@@ -3,7 +3,24 @@ using System.Linq;
 using System.Collections.Generic;
 
 namespace _06StoreBoxes
-{
+{class Item
+    {
+        public string Name { get; set; }
+
+        public decimal Price { get; set; }
+    }
+ 
+    class Box
+    {
+        public int SerialNumber { get; set; }
+
+        public Item Item { get; set; }
+
+        public int ItemQuantity { get; set; }
+
+        public decimal BoxPrice => this.ItemQuantity * this.Item.Price;
+    }    
+    
     class Program
     {
         static void Main(string[] args)
@@ -34,25 +51,8 @@ namespace _06StoreBoxes
                 boxes.Add(box);
             }
 
-            boxes.OrderByDescending(b => b.BoxPrice).ToList().ForEach(b => Console.Write($"{b.SerialNumber}{Environment.NewLine}-- {b.Item.Name} - ${b.Item.Price:f2}: {b.ItemQuantity}{Environment.NewLine}-- ${b.BoxPrice:f2}{Environment.NewLine}"));
+            boxes.OrderByDescending(b => b.BoxPrice).ToList()
+                .ForEach(b => Console.Write($"{b.SerialNumber}{Environment.NewLine}-- {b.Item.Name} - ${b.Item.Price:f2}: {b.ItemQuantity}{Environment.NewLine}-- ${b.BoxPrice:f2}{Environment.NewLine}"));
         }
-    }
-
-    class Box
-    {
-        public int SerialNumber { get; set; }
-
-        public Item Item { get; set; }
-
-        public int ItemQuantity { get; set; }
-
-        public decimal BoxPrice => this.ItemQuantity * this.Item.Price;
-    }
-
-    class Item
-    {
-        public string Name { get; set; }
-
-        public decimal Price { get; set; }
     }
 }
