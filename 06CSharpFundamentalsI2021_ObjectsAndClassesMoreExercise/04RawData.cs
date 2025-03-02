@@ -4,36 +4,32 @@ using System.Collections.Generic;
 
 namespace _04RawData
 {
-    class Program
+    class Engine
     {
-        static void Main(string[] args)
+        public Engine(int speed, int power)
         {
-            List<Car> cars = new List<Car>();
-            int carsCount = int.Parse(Console.ReadLine());
-            for (int i = 0; i < carsCount; i++)
-            {
-                string[] carData = Console.ReadLine().Split();
-                string model = carData[0];
-                int speed = int.Parse(carData[1]);
-                int power = int.Parse(carData[2]);
-                int weight = int.Parse(carData[3]);
-                string type = carData[4];
-                Car car = new Car(model, speed, power, weight, type);
-                cars.Add(car);
-            }
-
-            string cargoType = Console.ReadLine();
-            if (cargoType == "fragile")
-            {
-                cars.Where(c => c.Cargo.Type == "fragile" && c.Cargo.Weight < 1000).ToList().ForEach(c => Console.WriteLine(c.Model));
-            }
-            else if (cargoType == "flamable")
-            {
-                cars.Where(c => c.Cargo.Type == "flamable" && c.Engine.Power > 250).ToList().ForEach(c => Console.WriteLine(c.Model));
-            }
+            this.Speed = speed;
+            this.Power = power;
         }
-    }
 
+        public int Speed { get; }
+
+        public int Power { get; }
+    }
+    
+    class Cargo
+    {
+        public Cargo(int weight, string type)
+        {
+            this.Weight = weight;
+            this.Type = type;
+        }
+
+        public int Weight { get; }
+
+        public string Type { get; }
+    }
+    
     class Car
     {
         public Car(string model, int speed, int power, int weight, string type)
@@ -49,30 +45,35 @@ namespace _04RawData
 
         public Cargo Cargo { get; }
     }
-
-    class Cargo
+    
+    class Program
     {
-        public Cargo(int weight, string type)
+        static void Main(string[] args)
         {
-            this.Weight = weight;
-            this.Type = type;
+            List<Car> cars = new List<Car>();
+            int carsCount = int.Parse(Console.ReadLine());
+            for (int i = 0; i < carsCount; i++)
+            {
+                string[] carData = Console.ReadLine().Split();
+                string model = carData[0];
+                int speed = int.Parse(carData[1]);
+                int power = int.Parse(carData[2]);
+                int weight = int.Parse(carData[3]);
+                string type = carData[4];
+                
+                Car car = new Car(model, speed, power, weight, type);
+                cars.Add(car);
+            }
+
+            string cargoType = Console.ReadLine();
+            if (cargoType == "fragile")
+            {
+                cars.Where(c => c.Cargo.Type == "fragile" && c.Cargo.Weight < 1000).ToList().ForEach(c => Console.WriteLine(c.Model));
+            }
+            else if (cargoType == "flamable")
+            {
+                cars.Where(c => c.Cargo.Type == "flamable" && c.Engine.Power > 250).ToList().ForEach(c => Console.WriteLine(c.Model));
+            }
         }
-
-        public int Weight { get; }
-
-        public string Type { get; }
-    }
-
-    class Engine
-    {
-        public Engine(int speed, int power)
-        {
-            this.Speed = speed;
-            this.Power = power;
-        }
-
-        public int Speed { get; }
-
-        public int Power { get; }
     }
 }
