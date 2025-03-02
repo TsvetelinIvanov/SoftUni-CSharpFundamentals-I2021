@@ -4,6 +4,37 @@ using System.Collections.Generic;
 
 namespace _01CompanyRoster
 {
+    class Employee
+    {
+        public Employee(string name, decimal salary, string department)
+        {
+            this.Name = name;
+            this.Salary = salary;
+            this.Department = department;
+        }
+
+        public string Name { get; }
+        
+        public decimal Salary { get; }
+        
+        public string Department { get; }
+    }
+    
+    class Department
+    {
+        public Department(string name)
+        {
+            this.Name = name;
+            this.Employees = new List<Employee>();
+        }
+
+        public string Name { get; }
+
+        public List<Employee> Employees { get; }
+
+        public decimal AverageSalary => this.Employees.Average(e => e.Salary);        
+    }
+    
     class Program
     {
         static void Main(string[] args)
@@ -27,38 +58,9 @@ namespace _01CompanyRoster
                 department.Employees.Add(employee);
             }
 
-            Department highestPayedDepartment = departments.OrderByDescending(d => d.AgerageSalary).First();
+            Department highestPayedDepartment = departments.OrderByDescending(d => d.AverageSalary).First();
             Console.WriteLine("Highest Average Salary: " + highestPayedDepartment.Name);
             highestPayedDepartment.Employees.OrderByDescending(e => e.Salary).ToList().ForEach(e => Console.WriteLine($"{e.Name} {e.Salary:f2}"));
         }
-    }
-
-    class Department
-    {
-        public Department(string name)
-        {
-            this.Name = name;
-            this.Employees = new List<Employee>();
-        }
-
-        public string Name { get; }
-
-        public List<Employee> Employees { get; }
-
-        public decimal AgerageSalary => this.Employees.Average(e => e.Salary);        
-    }
-
-    class Employee
-    {
-        public Employee(string name, decimal salary, string department)
-        {
-            this.Name = name;
-            this.Salary = salary;
-            this.Department = department;
-        }
-
-        public string Name { get; }
-        public decimal Salary { get; }
-        public string Department { get; }
     }
 }
