@@ -4,33 +4,19 @@ using System.Linq;
 
 namespace _05ShoppingSpree
 {
-    class Program
+    class Product
     {
-        static void Main(string[] args)
+        public Product(string name, int cost)
         {
-            Person[] people = Console.ReadLine().Split(';', StringSplitOptions.RemoveEmptyEntries)
-                .Select(personData => new Person(personData.Split('=').First(), int.Parse(personData.Split('=').Last())))
-                .ToArray();
-            Product[] products = Console.ReadLine().Split(';', StringSplitOptions.RemoveEmptyEntries)
-                .Select(productData => new Product(productData.Split('=').First(), int.Parse(productData.Split('=').Last())))
-                .ToArray();
-
-            string buying;
-            while ((buying = Console.ReadLine()) != "END")
-            {
-                string personName = buying.Split().First();
-                string productName = buying.Split().Last();
-
-                Person person = people.First(p => p.Name == personName);
-                Product product = products.First(p => p.Name == productName);
-
-                person.BuyProduct(product);
-            }
-
-            Console.WriteLine(string.Join(Environment.NewLine, people.Select(p => p)));
+            this.Name = name;
+            this.Cost = cost;
         }
-    }
 
+        public string Name { get; }
+
+        public int Cost { get; }        
+    }
+    
     class Person
     {
         public Person(string name, int money)
@@ -67,17 +53,31 @@ namespace _05ShoppingSpree
             return this.Name + " - " + boughtProductsString;
         }
     }
-
-    class Product
+    
+    class Program
     {
-        public Product(string name, int cost)
+        static void Main(string[] args)
         {
-            this.Name = name;
-            this.Cost = cost;
+            Person[] people = Console.ReadLine().Split(';', StringSplitOptions.RemoveEmptyEntries)
+                .Select(personData => new Person(personData.Split('=').First(), int.Parse(personData.Split('=').Last())))
+                .ToArray();
+            Product[] products = Console.ReadLine().Split(';', StringSplitOptions.RemoveEmptyEntries)
+                .Select(productData => new Product(productData.Split('=').First(), int.Parse(productData.Split('=').Last())))
+                .ToArray();
+
+            string buying;
+            while ((buying = Console.ReadLine()) != "END")
+            {
+                string personName = buying.Split().First();
+                string productName = buying.Split().Last();
+
+                Person person = people.First(p => p.Name == personName);
+                Product product = products.First(p => p.Name == productName);
+
+                person.BuyProduct(product);
+            }
+
+            Console.WriteLine(string.Join(Environment.NewLine, people.Select(p => p)));
         }
-
-        public string Name { get; }
-
-        public int Cost { get; }        
     }
 }
