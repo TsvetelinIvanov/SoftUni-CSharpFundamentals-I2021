@@ -10,6 +10,7 @@ namespace _10SoftUniExamResults
         {            
             Dictionary<string, int> results = new Dictionary<string, int>();
             Dictionary<string, int> languages = new Dictionary<string, int>();
+            
             string submission;
             while ((submission = Console.ReadLine()) != "exam finished")
             {
