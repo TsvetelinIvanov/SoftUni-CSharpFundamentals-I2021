@@ -15,6 +15,7 @@ namespace _03LegendaryFarming
                 ["motes"] = 0
             };
             Dictionary<string, int> junkMaterials = new Dictionary<string, int>();
+            
             while (true)
             {
                 string[] inputMaterials = Console.ReadLine().Split();
