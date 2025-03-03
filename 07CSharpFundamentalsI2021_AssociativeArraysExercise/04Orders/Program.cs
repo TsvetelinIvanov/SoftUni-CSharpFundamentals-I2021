@@ -8,7 +8,6 @@ namespace _04Orders
         static void Main(string[] args)
         {
             Dictionary<string, KeyValuePair<decimal, int>> products = new Dictionary<string, KeyValuePair<decimal, int>>();
-            
             string productDataString;
             while ((productDataString = Console.ReadLine()) != "buy")
             {
