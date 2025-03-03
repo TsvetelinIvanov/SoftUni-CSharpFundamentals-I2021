@@ -8,6 +8,7 @@ namespace _05SoftUniParking
         static void Main(string[] args)
         {
             Dictionary<string, string> parking = new Dictionary<string, string>();
+            
             int commandsCount = int.Parse(Console.ReadLine());
             for (int i = 0; i < commandsCount; i++)
             {
