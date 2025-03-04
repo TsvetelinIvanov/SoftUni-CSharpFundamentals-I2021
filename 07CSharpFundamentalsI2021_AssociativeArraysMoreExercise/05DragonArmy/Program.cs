@@ -49,6 +49,7 @@ namespace _05DragonArmy
                 double averageHealth = dragonType.Value.Average(d => d.Value[1]);
                 double averageArmor = dragonType.Value.Average(d => d.Value[2]);
                 Console.WriteLine($"{dragonType.Key}::({averageDamage:f2}/{averageHealth:f2}/{averageArmor:f2})");
+                
                 foreach (KeyValuePair<string, int[]> dragon in dragonType.Value)
                 {
                     int damage = dragon.Value[0];
