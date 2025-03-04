@@ -32,6 +32,7 @@ namespace _01Ranking
                 string password = submissionData[1];
                 string username = submissionData[2];
                 int pointsCount = int.Parse(submissionData[3]);
+                
                 if (!contests.ContainsKey(contest) || contests[contest] != password)
                 {
                     continue;
