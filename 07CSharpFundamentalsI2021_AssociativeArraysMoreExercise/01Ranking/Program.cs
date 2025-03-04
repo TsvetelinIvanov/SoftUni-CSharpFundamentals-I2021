@@ -10,6 +10,7 @@ namespace _01Ranking
         {
             Dictionary<string, string> contests = new Dictionary<string, string>();
             Dictionary<string, Dictionary<string, int>> users = new Dictionary<string, Dictionary<string, int>>();
+            
             ReadInput(contests, users);
             PrintOutput(contests, users);            
         }
