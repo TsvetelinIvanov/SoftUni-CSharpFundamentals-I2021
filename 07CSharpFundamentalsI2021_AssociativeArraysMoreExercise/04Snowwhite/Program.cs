@@ -32,8 +32,7 @@ namespace _04Snowwhite
 
         private static void PrintOrderedDuarfsData(Dictionary<string, int> dwarfs)
         {
-            foreach (KeyValuePair<string, int> dwarf in dwarfs.OrderByDescending(d => d.Value)
-                .ThenByDescending(d => dwarfs.Count(dw => dw.Key.Split()[1] == d.Key.Split()[1])))
+            foreach (KeyValuePair<string, int> dwarf in dwarfs.OrderByDescending(d => d.Value).ThenByDescending(d => dwarfs.Count(dw => dw.Key.Split()[1] == d.Key.Split()[1])))
             {                
                 Console.WriteLine($"({dwarf.Key.Split()[1]}) {dwarf.Key.Split()[0]} <-> {dwarf.Value}");
             }
