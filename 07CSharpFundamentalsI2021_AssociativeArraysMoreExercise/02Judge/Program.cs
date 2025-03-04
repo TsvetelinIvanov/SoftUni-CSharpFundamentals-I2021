@@ -10,6 +10,7 @@ namespace _02Judge
         {
             Dictionary<string, Dictionary<string, int>> contests = new Dictionary<string, Dictionary<string, int>>();
             Dictionary<string, Dictionary<string, int>> users = new Dictionary<string, Dictionary<string, int>>();
+            
             ReadContestsRawData(contests, users);
             PrintContestsData(contests, users);
         }
@@ -23,6 +24,7 @@ namespace _02Judge
                 string username = contestData[0];
                 string contestName = contestData[1];
                 int pointsCount = int.Parse(contestData[2]);
+                
                 if (!contests.ContainsKey(contestName))
                 {
                     contests.Add(contestName, new Dictionary<string, int>());
