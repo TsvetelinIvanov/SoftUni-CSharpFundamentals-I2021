@@ -7,6 +7,7 @@ namespace _08LettersChangeNumbers
         static void Main(string[] args)
         {
             string[] strings = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            
             decimal sum = 0;
             foreach (string @string in strings)
             {
