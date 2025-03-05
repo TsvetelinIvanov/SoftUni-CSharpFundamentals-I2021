@@ -9,6 +9,7 @@ namespace _05MultiplyBigNumber
         {
             string numberString = Console.ReadLine();
             int multiplierDigit = int.Parse(Console.ReadLine());
+            
             string productString = MultiplyNumber(numberString, multiplierDigit);
             Console.WriteLine(productString);
         }
@@ -33,6 +34,7 @@ namespace _05MultiplyBigNumber
             {
                 int currentDigit = int.Parse(numberBuilder[i].ToString());
                 int currentProduct = currentDigit * multiplierDigit + additionDigit;
+                
                 int newDigit = currentProduct % 10;
                 additionDigit = currentProduct / 10;
                 productBuilder[i] = char.Parse(newDigit.ToString());
