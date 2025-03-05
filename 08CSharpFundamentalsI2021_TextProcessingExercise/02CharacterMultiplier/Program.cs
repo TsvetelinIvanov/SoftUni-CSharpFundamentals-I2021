@@ -9,6 +9,7 @@ namespace _02CharacterMultiplier
             string[] strings = Console.ReadLine().Split();
             string firstString = strings[0];
             string secondString = strings[1];
+            
             int sum = MultilpyAndSumCharacters(firstString, secondString);
             Console.WriteLine(sum);
         }
