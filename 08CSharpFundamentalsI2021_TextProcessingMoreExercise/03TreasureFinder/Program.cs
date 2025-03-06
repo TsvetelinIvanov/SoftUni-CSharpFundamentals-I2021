@@ -8,17 +8,18 @@ namespace _03TreasureFinder
         static void Main(string[] args)
         {
             int[] keyNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            char treasureTypeChar = '&';
-            char treasureCoordinatesStartChar = '<';
-            char treasureCoordinatesEndChar = '>';
+            char treasureTypeCharacter = '&';
+            char treasureCoordinatesStartCharacter = '<';
+            char treasureCoordinatesEndCharacter = '>';
+            
             string encryptedMessage;
             while ((encryptedMessage = Console.ReadLine()) != "find")
             {
                 string decryptedMessage = DecryptMessage(keyNumbers, encryptedMessage);
-                int treasureTypeStartIndex = decryptedMessage.IndexOf(treasureTypeChar) + 1;
-                int treasureTypeEndIndex = decryptedMessage.LastIndexOf(treasureTypeChar);
-                int treasureCoordinatesStartIndex = decryptedMessage.IndexOf(treasureCoordinatesStartChar) + 1;
-                int treasureCoordinatesEndIndex = decryptedMessage.IndexOf(treasureCoordinatesEndChar);
+                int treasureTypeStartIndex = decryptedMessage.IndexOf(treasureTypeCharacter) + 1;
+                int treasureTypeEndIndex = decryptedMessage.LastIndexOf(treasureTypeCharacter);
+                int treasureCoordinatesStartIndex = decryptedMessage.IndexOf(treasureCoordinatesStartCharacter) + 1;
+                int treasureCoordinatesEndIndex = decryptedMessage.IndexOf(treasureCoordinatesEndCharacter);
 
                 string treasureType = decryptedMessage.Substring(treasureTypeStartIndex, treasureTypeEndIndex - treasureTypeStartIndex);
                 string treasureCoordinates = decryptedMessage.Substring(treasureCoordinatesStartIndex, treasureCoordinatesEndIndex - treasureCoordinatesStartIndex);
@@ -32,8 +33,8 @@ namespace _03TreasureFinder
             int keyIndex = 0;
             for (int i = 0; i < encryptedMessage.Length; i++)
             {
-                char decryptedChar = (char)(encryptedMessage[i] - keyNumbers[keyIndex]);
-                decryptedMessage += decryptedChar;
+                char decryptedCharacter = (char)(encryptedMessage[i] - keyNumbers[keyIndex]);
+                decryptedMessage += decryptedCharacter;
                 keyIndex++;
                 if (keyIndex == keyNumbers.Length)
                 {
