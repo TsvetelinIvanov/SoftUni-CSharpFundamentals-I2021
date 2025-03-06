@@ -9,6 +9,7 @@ namespace _05HTML
         {
             string articleTitle = Console.ReadLine();
             string articleContent = Console.ReadLine();
+            
             List<string> articleComments = new List<string>();
             string articleComment;
             while ((articleComment = Console.ReadLine()) != "end of comments")
