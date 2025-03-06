@@ -6,19 +6,19 @@ namespace _02AsciiSumator
     {
         static void Main(string[] args)
         {
-            char startChar = char.Parse(Console.ReadLine());
-            char endChar = char.Parse(Console.ReadLine());
-            string str = Console.ReadLine();
-            int charSum = 0;
-            foreach (char ch in str)
+            char startCharacter = char.Parse(Console.ReadLine());
+            char endCharacter = char.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+            int charactersSum = 0;
+            foreach (char ch in input)
             {
-                if (ch > startChar && ch < endChar)
+                if (ch > startCharacter && ch < endCharacter)
                 {
-                    charSum += ch;
+                    charactersSum += ch;
                 }
             }
 
-            Console.WriteLine(charSum);
+            Console.WriteLine(charactersSum);
         }
     }
 }
