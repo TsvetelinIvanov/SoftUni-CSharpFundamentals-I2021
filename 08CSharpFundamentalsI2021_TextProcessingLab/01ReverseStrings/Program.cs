@@ -14,12 +14,12 @@ namespace _01ReverseStrings
             }
         }
 
-        private static string ReverseString(string str)
+        private static string ReverseString(string stringForReversing)
         {
             string reversed = string.Empty;
-            for (int i = str.Length - 1; i >= 0; i--)
+            for (int i = stringForReversing.Length - 1; i >= 0; i--)
             {
-                reversed += str[i];
+                reversed += stringForReversing[i];
             }
 
             return reversed;
