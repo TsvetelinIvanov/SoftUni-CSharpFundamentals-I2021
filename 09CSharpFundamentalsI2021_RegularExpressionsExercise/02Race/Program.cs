@@ -12,6 +12,7 @@ namespace _02Race
             Dictionary<string, int> participants = Console.ReadLine().Split(", ").ToDictionary(p => p, p  => 0);
             string racePattern = @"[A-Za-z0-9]";
             Regex raceRegex = new Regex(racePattern);
+            
             string raceDataString;
             while ((raceDataString = Console.ReadLine()) != "end of race")
             {
