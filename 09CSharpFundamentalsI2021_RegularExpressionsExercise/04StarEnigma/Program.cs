@@ -11,7 +11,8 @@ namespace _04StarEnigma
             List<string> attackedPlanets = new List<string>();
             List<string> destroyedPlanets = new List<string>();
             string messagePattern = @"(@[A-Za-z]+)[^@!:>-]*(:\d+)[^@!:>-]*(\![AD]\!)[^@!:>-]*(->\d+)";
-            Regex messageRegex = new Regex(messagePattern);            
+            Regex messageRegex = new Regex(messagePattern);
+            
             int messagesCount = int.Parse(Console.ReadLine());
             for (int i = 0; i < messagesCount; i++)
             {
@@ -56,6 +57,7 @@ namespace _04StarEnigma
             Regex keyRegex = new Regex(keyPattern);
             MatchCollection keyCollection = keyRegex.Matches(encryptedMessage);
             int key = keyCollection.Count;
+            
             string decryptedMessage = string.Empty;
             for (int i = 0; i < encryptedMessage.Length; i++)
             {
