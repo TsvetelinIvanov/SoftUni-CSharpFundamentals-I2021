@@ -62,12 +62,14 @@ namespace _01WinningTicket
             {
                 string symbol = matchFirstHalf.Value[0].ToString();
                 Console.WriteLine($"ticket \"{ticket}\" - 10{symbol} Jackpot!");
+                
                 return true;
             }
             else if (symbolMatchesLength >= 6)
             {
                 string symbol = matchFirstHalf.Value[0].ToString();
                 Console.WriteLine($"ticket \"{ticket}\" - {symbolMatchesLength}{symbol}");
+                
                 return true;
             }
 
