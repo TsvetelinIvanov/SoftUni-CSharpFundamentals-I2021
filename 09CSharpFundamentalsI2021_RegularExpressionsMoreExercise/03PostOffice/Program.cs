@@ -10,6 +10,7 @@ namespace _03PostOffice
         static void Main(string[] args)
         {
             string[] input = Console.ReadLine().Split('|');
+            
             string firstPart = input[0];
             string capitalLettersString = FindCapitalLetters(firstPart);            
 
@@ -18,6 +19,7 @@ namespace _03PostOffice
             
             string thirdPart = input[2];
             string[] words = thirdPart.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            
             List<string> validWords = new List<string>();
             foreach (string word in words)
             {
