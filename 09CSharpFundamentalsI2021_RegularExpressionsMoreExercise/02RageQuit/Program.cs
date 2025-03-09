@@ -12,6 +12,7 @@ namespace _02RageQuit
             string input = Console.ReadLine().ToUpper();
             Regex stringRegex = new Regex(@"(\D+)(\d+)");
             MatchCollection matches = stringRegex.Matches(input);
+            
             StringBuilder stringBuilder = new StringBuilder();
             foreach (Match match in matches)
             {
