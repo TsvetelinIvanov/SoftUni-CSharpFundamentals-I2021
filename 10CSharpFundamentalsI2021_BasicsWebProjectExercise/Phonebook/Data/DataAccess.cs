@@ -8,7 +8,7 @@ namespace Phonebook.Data
     {
         static DataAccess()
         {
-            Contacts = new List<Contact>();
+            this.Contacts = new List<Contact>();
         }
 
         public static List<Contact> Contacts { get; set; }
