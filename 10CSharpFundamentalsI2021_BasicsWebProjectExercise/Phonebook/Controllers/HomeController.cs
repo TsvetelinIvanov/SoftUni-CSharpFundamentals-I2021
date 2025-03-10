@@ -8,7 +8,7 @@ namespace Phonebook.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(DataAccess.Contacts);
+            return this.View(DataAccess.Contacts);
         }
     }
 }
