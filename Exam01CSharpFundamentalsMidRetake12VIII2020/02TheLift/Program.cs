@@ -9,8 +9,7 @@ namespace _02TheLift
         {
             int maxPlacesCount = 4;
             int peopleCount = int.Parse(Console.ReadLine());
-            int[] lift = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            
+            int[] lift = Console.ReadLine().Split().Select(int.Parse).ToArray();            
             for (int i = 0; i < lift.Length; i++)
             {
                 int freePlacesCount = maxPlacesCount - lift[i];
