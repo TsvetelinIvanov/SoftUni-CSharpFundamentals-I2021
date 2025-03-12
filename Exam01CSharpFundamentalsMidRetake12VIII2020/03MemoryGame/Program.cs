@@ -10,6 +10,7 @@ namespace _03MemoryGame
         {
             List<string> twins = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
             int turnsCount = 0;
+            
             string indicesString;
             while ((indicesString = Console.ReadLine()) != "end" && twins.Count > 0)
             {
