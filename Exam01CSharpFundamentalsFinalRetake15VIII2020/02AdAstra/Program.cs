@@ -12,6 +12,7 @@ namespace _02AdAstra
             Regex foodInfoRegex = new Regex(@"(#|\|)(?<itemName>[A-Za-z ]+)\1(?<expirationDate>\d{2}/\d{2}/\d{2})\1(?<caloriesCount>\d{1,5})\1");
             List<string> foodData = new List<string>();
             int totalCaloriesCount = 0;
+            
             string rawFoodInfoString = Console.ReadLine();
             MatchCollection foodInfoMatches = foodInfoRegex.Matches(rawFoodInfoString);
             foreach (Match foodInfoMatch in foodInfoMatches)
@@ -20,6 +21,7 @@ namespace _02AdAstra
                 string expirationDate = foodInfoMatch.Groups["expirationDate"].Value;
                 int caloriesCount = int.Parse(foodInfoMatch.Groups["caloriesCount"].Value);
                 totalCaloriesCount += caloriesCount;
+                
                 string foodInfo = $"Item: {itemName}, Best before: {expirationDate}, Nutrition: {caloriesCount}";
                 foodData.Add(foodInfo);
             }
