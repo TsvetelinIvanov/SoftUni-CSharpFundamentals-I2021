@@ -34,7 +34,11 @@ namespace _01ComputerStore
                     totalPrice *= 0.9m;
                 }
 
-                output = $"Congratulations you've just bought a new computer!{Environment.NewLine}Price without taxes: {totalPriceWithoutTax:f2}${Environment.NewLine}Taxes: {tax:f2}${Environment.NewLine}{new string('-', 11)}{Environment.NewLine}Total price: {totalPrice:f2}$";
+                output = $"Congratulations you've just bought a new computer!{Environment.NewLine}" + 
+                    $"Price without taxes: {totalPriceWithoutTax:f2}${Environment.NewLine}" + 
+                    $"Taxes: {tax:f2}${Environment.NewLine}" + 
+                    $"{new string('-', 11)}{Environment.NewLine}" + 
+                    $"Total price: {totalPrice:f2}$";
             }
 
             Console.WriteLine(output);
