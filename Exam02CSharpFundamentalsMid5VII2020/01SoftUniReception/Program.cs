@@ -10,6 +10,7 @@ namespace _01SoftUniReception
             int secondEmployeeStudentsPerHour = int.Parse(Console.ReadLine());
             int thirdEmployeeStudentsPerHour = int.Parse(Console.ReadLine());
             int employeesEfficiency = firstEmployeeStudentsPerHour + secondEmployeeStudentsPerHour + thirdEmployeeStudentsPerHour;
+            
             int studentsCount = int.Parse(Console.ReadLine());
             int hoursCount = CalculateHours(employeesEfficiency, studentsCount);
             Console.WriteLine($"Time needed: {hoursCount}h.");
