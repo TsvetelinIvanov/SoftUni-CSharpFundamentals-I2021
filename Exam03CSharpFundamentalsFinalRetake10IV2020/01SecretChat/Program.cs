@@ -26,7 +26,6 @@ namespace _01SecretChat
                         if (substringIndex < 0)
                         {
                             Console.WriteLine("error");
-
                             break; ;
                         }
 
