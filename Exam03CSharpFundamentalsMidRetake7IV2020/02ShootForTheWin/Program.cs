@@ -9,6 +9,7 @@ namespace _02ShootForTheWin
         {
             int[] targets = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int shotTargetsCount = 0;
+            
             string input;
             while ((input = Console.ReadLine()) != "End")
             {
