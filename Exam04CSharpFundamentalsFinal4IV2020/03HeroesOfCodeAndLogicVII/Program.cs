@@ -68,6 +68,7 @@ namespace _03HeroesOfCodeAndLogicVII
             string heroName = arguments[0];
             int neededManaPointsCount = int.Parse(arguments[1]);
             string spellName = arguments[2];
+            
             if (heroes[heroName][1] >= neededManaPointsCount)
             {
                 heroes[heroName][1] -= neededManaPointsCount;
