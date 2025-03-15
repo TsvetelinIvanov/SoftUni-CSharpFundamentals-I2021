@@ -9,6 +9,7 @@ namespace _01CounterStrike
             int energy = int.Parse(Console.ReadLine());
             int winsCount = 0;
             bool isWin = true;
+            
             string input;
             while ((input = Console.ReadLine()) != "End of battle")
             {
