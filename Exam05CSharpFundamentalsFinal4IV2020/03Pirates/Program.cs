@@ -16,6 +16,7 @@ namespace _03Pirates
                 string cityName = cityData[0];
                 int population = int.Parse(cityData[1]);
                 int gold = int.Parse(cityData[2]);
+                
                 if (!cities.ContainsKey(cityName))
                 {
                     cities.Add(cityName, new int[] { population, gold });
@@ -64,9 +65,11 @@ namespace _03Pirates
             string cityName = arguments[0];
             int peopleCount = int.Parse(arguments[1]);
             int gold = int.Parse(arguments[2]);
+            
             cities[cityName][0] -= peopleCount;
             cities[cityName][1] -= gold;
             Console.WriteLine($"{cityName} plundered! {gold} gold stolen, {peopleCount} citizens killed.");
+            
             if (cities[cityName][0] <= 0 || cities[cityName][1] <= 0)
             {
                 cities.Remove(cityName);
@@ -81,6 +84,7 @@ namespace _03Pirates
             if (gold < 0)
             {
                 Console.WriteLine("Gold added cannot be a negative number!");
+                
                 return;
             }
 
