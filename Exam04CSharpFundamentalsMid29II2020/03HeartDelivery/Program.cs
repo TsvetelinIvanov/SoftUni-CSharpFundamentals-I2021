@@ -9,6 +9,7 @@ namespace _03HeartDelivery
         {
             int[] neighborhood = Console.ReadLine().Split('@').Select(int.Parse).ToArray();
             int cupidPosition = 0;
+            
             string input;
             while ((input = Console.ReadLine()) != "Love!")
             {
