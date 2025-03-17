@@ -17,6 +17,7 @@ namespace _03Problem
                 string command = mealData[0];
                 string guest = mealData[1];
                 string meal = mealData[2];
+                
                 switch (command)
                 {
                     case "Like":
