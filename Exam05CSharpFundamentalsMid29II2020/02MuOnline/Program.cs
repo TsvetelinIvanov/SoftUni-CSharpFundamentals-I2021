@@ -9,9 +9,11 @@ namespace _02MuOnline
         {
             const int InitialHealth = 100;
             const int InitialBitcoinsCount = 0;
+            
             int health = InitialHealth;
             int bitcoinsCount = InitialBitcoinsCount;
             int visitedRoomsCount = 0;
+            
             string[] rooms = Console.ReadLine().Split('|');
             foreach (string room in rooms)
             {
