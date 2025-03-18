@@ -7,9 +7,11 @@ namespace _01Problem
         static void Main(string[] args)
         {
             const int month = 30;
+            
             int workerBiscuitsPerDay = int.Parse(Console.ReadLine());
             int workersCount = int.Parse(Console.ReadLine());
             int competingFactoryBiscuitsCount = int.Parse(Console.ReadLine());
+            
             int factoryBiscuitsCount = 0;
             for (int i = 1; i <= month; i++)
             {
