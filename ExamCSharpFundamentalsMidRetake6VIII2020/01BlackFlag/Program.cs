@@ -9,6 +9,7 @@ namespace _01BlackFlag
             int daysCount = int.Parse(Console.ReadLine());
             int dailyPlunder = int.Parse(Console.ReadLine());
             decimal expectedPlunder = decimal.Parse(Console.ReadLine());
+            
             decimal gainedPlunder = 0;
             for (int i = 1; i <= daysCount; i++)
             {
