@@ -10,6 +10,7 @@ namespace _03ManOWar
             int[] pirateShip = Console.ReadLine().Split('>').Select(int.Parse).ToArray();
             int[] warship = Console.ReadLine().Split('>').Select(int.Parse).ToArray();
             int maxHealth = int.Parse(Console.ReadLine());
+            
             bool haveWinner = false;
             string battleCommandsString;
             while ((battleCommandsString = Console.ReadLine()) != "Retire")
@@ -75,6 +76,7 @@ namespace _03ManOWar
             if (warship[index] <= 0)
             {
                 Console.WriteLine("You won! The enemy ship has sunken.");
+                
                 return true;
             }
 
@@ -89,6 +91,7 @@ namespace _03ManOWar
                 if (pirateShip[i] <= 0)
                 {
                     Console.WriteLine("You lost! The pirate ship has sunken.");
+                    
                     return true;
                 }
             }
